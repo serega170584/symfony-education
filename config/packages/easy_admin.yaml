@@ -7,9 +7,9 @@ easy_admin:
           - { entity: 'Comment', label: 'Comments', icon: 'comments' }
     entities:
         Conference:
-        - App\Entity\Conference
+          class: App\Entity\Conference
         Comment:
-        - App\Entity\Comment
+          class: App\Entity\Comment
         list:
           fields:
             - author
@@ -17,10 +17,10 @@ easy_admin:
             - { property: 'createdAt', type: 'datetime' }
           sort: ['createdAt', 'ASC']
           filters: ['conference']
-          edit:
-            fields:
-              - { property: 'conference' }
-              - { property: 'createdAt', type: datetime, type_options: { disabled: true } }
-              - 'author'
-              - { property: 'email', type: 'email' }
-              - text
+        edit:
+          fields:
+            - { property: 'conference' }
+            - { property: 'createdAt', type: datetime, type_options: { disabled: true } }
+            - 'author'
+            - { property: 'email', type: 'email' }
+            - text
