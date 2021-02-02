@@ -33,7 +33,7 @@ class ConferenceController extends AbstractController
     /**
      * @Route("/conference/{id}", name="conference")
      */
-    public function show(Conference $conference, CommentRepository $commentRepository, ConferenceRepository $conferenceRepository):
+    public function show(Conference $conference, CommentRepository $commentRepository, ConferenceRepository $conferenceRepository): Response
     {
         return new Response($this->twig->render('conference/show.html.twig', [
             'conferences' => $conferenceRepository->findAll(),
