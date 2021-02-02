@@ -6,6 +6,8 @@ easy_admin:
           - { entity: 'Conference', label: 'Conferences', icon: 'map-marker' }
           - { entity: 'Comment', label: 'Comments', icon: 'comments' }
     entities:
+        Conference:
+        - App\Entity\Conference
         Comment:
         - App\Entity\Comment
         list:
@@ -22,5 +24,3 @@ easy_admin:
               - 'author'
               - { property: 'email', type: 'email' }
               - text
-        Conference:
-        - App\Entity\Conference
