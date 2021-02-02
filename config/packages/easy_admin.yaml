@@ -10,4 +10,18 @@ easy_admin:
       class: App\Entity\Conference
     Comment:
       class: App\Entity\Comment
+      list:
+        fields:
+          - author
+          - { property: 'email', type: 'email' }
+          - { property: 'createdAt', type: 'datetime' }
+        sort: ['createdAt', 'ASC']
+        filters: ['conference']
+        edit:
+          fields:
+            - { property: 'conference' }
+            - { property: 'createdAt', type: datetime, type_options: { disabled: true } }
+            - 'author'
+            - { property: 'email', type: 'email' }
+            - text
 
