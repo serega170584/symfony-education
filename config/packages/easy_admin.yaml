@@ -23,4 +23,4 @@ easy_admin:
             - { property: 'createdAt', type: datetime, type_options: { disabled: true } }
             - 'author'
             - { property: 'email', type: 'email' }
-            - text
+            - 'text'
