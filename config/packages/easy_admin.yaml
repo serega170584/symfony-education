@@ -6,8 +6,6 @@ easy_admin:
           - { entity: 'Conference', label: 'Conferences', icon: 'map-marker' }
           - { entity: 'Comment', label: 'Comments', icon: 'comments' }
     entities:
-#        # List the entity class name you want to manage
-#        - App\Entity\Product
         Comment:
         - App\Entity\Comment
         list:
