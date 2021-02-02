@@ -7,7 +7,7 @@ easy_admin:
       - { entity: 'Comment', label: 'Comments', icon: 'comments' }
   entities:
     Conference:
-    - App\Entity\Conference
+      class: App\Entity\Conference
     Comment:
-    - App\Entity\Comment
+      class: App\Entity\Comment
 
