@@ -6,6 +6,8 @@ easy_admin:
       - { entity: 'Conference', label: 'Conferences', icon: 'map-marker' }
       - { entity: 'Comment', label: 'Comments', icon: 'comments' }
   entities:
-    - App\Entity\Comment
+    Conference:
     - App\Entity\Conference
+    Comment:
+    - App\Entity\Comment
 
