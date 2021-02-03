@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\Comment;
 use App\Entity\Conference;
+use App\Form\CommentFormType;
 use App\Repository\CommentRepository;
 use App\Repository\ConferenceRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -35,10 +37,13 @@ class ConferenceController extends AbstractController
      */
     public function show(Conference $conference, CommentRepository $commentRepository, ConferenceRepository $conferenceRepository): Response
     {
+        $comment = new Comment();
+        $form = $this->createForm(CommentFormType::class, $comment);
         return new Response($this->twig->render('conference/show.html.twig', [
             'conferences' => $conferenceRepository->findAll(),
             'conference' => $conference,
             'comments' => $commentRepository->findBy(['conference' => $conference], ['createdAt' => 'DESC']),
+            'comment_form' => $form->createView(),
         ]));
     }
 }
