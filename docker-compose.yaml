@@ -13,6 +13,3 @@ services:
   rabbitmq:
    image: rabbitmq:3.7-management
    ports: [5672, 15672]
-  debian:
-   image: debian:8
-   entrypoint: /bin/bash
