@@ -15,3 +15,4 @@ services:
    ports: [5672, 15672]
   debian:
    image: debian:8
+   entrypoint: bash
